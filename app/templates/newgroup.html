@@ -1,16 +1,23 @@
 <!-- extend from base layout -->
 {% extends "base.html" %}
 {% block content %}
-  <h1>Neue Gruppe anlegen.</h1>
+<h1>Neue Gruppe anlegen.</h1>
+  
+{% if error %}
+<div class="alert alert-danger" role="alert">
+  <strong>Mist!</strong> {{ error }}
+</div>
+{% endif %}
+
   <form action="" method="post" name="makegroup">
       {{ form.hidden_tag() }}
       
       <div>
       <p>
           Bitte gib die Namen aller Teilnehmer ein (mit Komma ',' getrennt):</p>
-          <p>
-          {{ form.namesfield() }}
-      </p>
+      <div class="form-group">
+          {{ form.namesfield(class_="form-control") }}
+      </div>
       </div>
       
       <p><input type="submit" value="Wichteln!" class="btn btn-lg btn-secondary"></p>

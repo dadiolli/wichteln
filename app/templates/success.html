@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+        <h1 class="cover-heading">Okay, mal sehen…</h1>
+        <p>✅ Eine neue Wichtelgruppe, bestehend aus {{ namelist }} wurde angelegt und Schenker und Beschenkte gezogen.</p>
+        <p>&nbsp;</p>
+        <table class="table table-hover table-inverse">
+  		<thead>
+	    <tr>
+      		<th>#</th>
+      		<th>Name</th>
+      		<th>Abholcode</th>
+    	</tr>
+  		</thead>
+  		<tbody>
+        {% for counter, name, session, encoded in results %}
+	     <tr>
+	      <th scope="row">{{ counter }}</th>
+	      <td>{{ name }}</td>
+	      <td>{{ urlstart }}?key={{ session }}{{ encoded }}</td>
+	    </tr> 		
+ 		{% endfor %}
+		</tbody>
+		</table>
+{% endblock %}
