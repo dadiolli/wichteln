@@ -1,0 +1,18 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+{% block content %}
+  <h1>Neue Gruppe anlegen.</h1>
+  <form action="" method="post" name="makegroup">
+      {{ form.hidden_tag() }}
+      
+      <div>
+      <p>
+          Bitte gib die Namen aller Teilnehmer ein (mit Komma ',' getrennt):</p>
+          <p>
+          {{ form.namesfield() }}
+      </p>
+      </div>
+      
+      <p><input type="submit" value="Wichteln!" class="btn btn-lg btn-secondary"></p>
+  </form>
+{% endblock %}
