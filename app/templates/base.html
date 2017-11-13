@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Wichtelgenerator – A simple Python secret Santa generator">
     <meta name="author" content="Ebano, dadiolli">
-    <!--<link rel="icon" href="../../../../favicon.ico">-->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
     <title>{{ title }} - Wichtelgenerator</title>
 
@@ -16,6 +16,7 @@
   </head>
 
   <body>
+	<img class="dwarflogo" src="{{ url_for('static', filename='gartenzwerg_texthell.png') }}" name="Wichtel" alt="Wichtel" title="Wichtel"/>
 
     <div class="site-wrapper">
 
